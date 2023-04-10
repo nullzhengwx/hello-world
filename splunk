@@ -1,4 +1,0 @@
-sourcetype=access_* status=200 action=purchase 
-[search sourcetype=access_* status=200 action=purchase | top limit=1 clientip | table clientip] 
-| stats count as buyCount dc(productName) as productCount values(productName) as productNames by clientip 
-| rename clientip AS "vip counsumer"
